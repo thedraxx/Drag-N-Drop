@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+// colors
+
+$white: rgb(255, 255, 255);
+$black: #000000;
+$gray: #a3a3a3;
+$orange: #ff9939;
+$rose: #ff34bf;
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $rose;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+
+  .empty {
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    border: solid 3px $black;
+    background: $white;
+
+    .fill {
+      background-image: url('https://source.unsplash.com/random/150x150');
+      height: 145px;
+      width: 145px;
+      cursor: pointer;
+
+      .hold {
+        border: solid 5px $orange;
+      }
+    }
+  }
+
+  .hovered {
+    background-color: $orange;
+    border-color: $white;
+    border-style: dashed;
+  }
+
+}
+
+@media(max-width: 800px) {
+  body {
+    flex-direction: column;
+  }
+}
